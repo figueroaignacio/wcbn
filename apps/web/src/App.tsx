@@ -31,7 +31,7 @@ export default function App() {
 
   return (
     <div style={styles}>
-      <h1>Hello from Web! 🌐</h1>
+      <h1>Hello from React Web! 🌐</h1>
       <Button onClick={onClick}>Click here</Button>
       <span>👆🏽</span>
       <Alert>That component comes from a shared package, awesome</Alert>

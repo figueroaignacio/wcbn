@@ -6,7 +6,7 @@ app.use(express.json());
 
 app.get("/", (req: Request, res: Response) => {
   res.send(`
-      <h1>Welcome to this kind of API</h1>
+      <h1>Hello from the express API</h1>
       <p>Yes, it works (At least for now xd...)</p>
       <p>Need help? Just yell: <code>CTRL + C</code> and try again.</p>
     `);
