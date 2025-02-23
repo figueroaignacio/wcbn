@@ -1,4 +1,8 @@
+// express
 import express, { Request, Response } from "express";
+
+// Routes
+import challengeRouter from "./routes/challenge.route";
 
 const app = express();
 
@@ -11,5 +15,7 @@ app.get("/", (req: Request, res: Response) => {
       <p>Need help? Just yell: <code>CTRL + C</code> and try again.</p>
     `);
 });
+
+app.use("/api/challenges", challengeRouter);
 
 export { app };
