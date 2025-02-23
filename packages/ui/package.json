@@ -5,7 +5,6 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc && vite build",
-    "dev": "vite",
     "clean": "rm -rf dist"
   },
   "dependencies": {
