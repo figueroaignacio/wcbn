@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { ChallengeCard } from "../../components/challenge-card";
 import { API_URL } from "../../lib/constants";
 import { Challenge } from "../../lib/definitions";
 
@@ -19,8 +20,11 @@ export function Challenges() {
     <ul>
       {challenges.map((challenge) => (
         <li key={challenge.id}>
-          <h2>{challenge.title}</h2>
-          <p>{challenge.description}</p>
+          <ChallengeCard
+            image={challenge.image}
+            title={challenge.title}
+            description={challenge.description}
+          />
         </li>
       ))}
     </ul>

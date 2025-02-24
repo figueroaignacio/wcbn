@@ -17,6 +17,7 @@
     "package.json"
   ],
   "scripts": {
+    "dev": "tsup --watch",
     "build": "tsup",
     "clean": "rm -rf node_modules dist"
   },
