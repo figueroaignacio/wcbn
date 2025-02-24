@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { ChallengeCard } from "../../components/challenge-card";
+import { ChallengeCard } from "../../components/challenge-card/challenge-card";
 import { API_URL } from "../../lib/constants";
 import { Challenge } from "../../lib/definitions";
+import styles from "./challenges.module.css";
 
 export function Challenges() {
   const [challenges, setChallenges] = useState<Challenge[]>([]);
@@ -17,7 +18,7 @@ export function Challenges() {
   }, []);
 
   return (
-    <ul>
+    <ul className={styles.challenges}>
       {challenges.map((challenge) => (
         <li key={challenge.id}>
           <ChallengeCard

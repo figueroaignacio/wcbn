@@ -1,9 +1,11 @@
 .card {
+  position: relative;
   border: 1px solid var(--border);
   padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
 
   &:hover {
     transform: translateY(-4px);
