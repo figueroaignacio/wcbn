@@ -1,3 +1,4 @@
+import { ExternalLinkIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import { Badge, Card, LinkButton } from "@wcbn/ui";
 import { Challenge } from "../../lib/definitions";
 import styles from "./challenge-card.module.css";
@@ -35,8 +36,12 @@ export function ChallengeCard({
           ))}
         </ul>
         <div className={styles.challengeActions}>
-          <LinkButton href={liveDemo}>Live URL</LinkButton>
-          <LinkButton href={sourceCode}>Source Code</LinkButton>
+          <LinkButton href={liveDemo}>
+            Live URL <ExternalLinkIcon />
+          </LinkButton>
+          <LinkButton href={sourceCode}>
+            Source Code <GitHubLogoIcon />
+          </LinkButton>
         </div>
       </div>
     </Card>
