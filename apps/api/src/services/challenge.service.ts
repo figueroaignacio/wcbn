@@ -4,9 +4,11 @@ import { db } from "../config/db";
 import { CreateChallengeDTO } from "../dtos/challenge.dto";
 
 export async function getChallenges() {
-  return await db.challenge.findMany();
+  const challenges = await db.challenge.findMany();
+  return challenges;
 }
 
 export async function createChallenge(data: CreateChallengeDTO) {
-  return await db.challenge.create({ data });
+  const challenge = await db.challenge.create({ data });
+  return challenge;
 }
