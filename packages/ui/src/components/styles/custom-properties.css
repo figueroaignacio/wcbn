@@ -1,7 +1,7 @@
 :root {
   --background: hsl(220, 15%, 5%);
   --foreground: hsl(210, 20%, 98%);
-  --card: hsl(220, 15%, 8%);
+  --card: hsl(220, 15%, 5.5%);
   --card-foreground: hsl(210, 20%, 98%);
   --primary: hsl(220, 70%, 60%);
   --primary-foreground: hsl(220, 15%, 5%);

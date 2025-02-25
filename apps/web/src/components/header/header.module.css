@@ -1,0 +1,21 @@
+.header {
+  padding: 2rem 0;
+  position: sticky;
+  inset: 0;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px dashed var(--border);
+  z-index: 100;
+
+  & div {
+    max-width: 922px;
+    margin: auto;
+  }
+
+  & a {
+    text-decoration: underline;
+  }
+
+  & a:hover {
+    color: var(--accent);
+  }
+}
