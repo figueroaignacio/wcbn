@@ -1,3 +1,40 @@
+:root {
+  --background: hsl(220, 15%, 5%);
+  --foreground: hsl(210, 20%, 98%);
+  --card: hsl(220, 15%, 8%);
+  --card-foreground: hsl(210, 20%, 98%);
+  --primary: hsl(220, 70%, 60%);
+  --primary-foreground: hsl(220, 15%, 5%);
+  --secondary: hsl(200, 60%, 60%);
+  --secondary-foreground: hsl(220, 15%, 5%);
+  --accent: hsl(340, 70%, 70%);
+  --accent-foreground: hsl(220, 15%, 5%);
+  --muted: hsl(220, 15%, 15%);
+  --muted-foreground: hsl(220, 15%, 70%);
+  --border: hsl(220, 15%, 10%);
+  --input: hsl(220, 15%, 20%);
+  --ring: hsl(220, 70%, 60%);
+  --radius: 0.75rem;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 5px;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--muted-foreground) transparent;
+  scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
+}
+
 *,
 *::before,
 *::after {
@@ -15,10 +52,12 @@ body {
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
   font-family: "Poppins", sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
 main {
-  max-width: 1024px;
+  max-width: 922px;
   margin: auto;
   padding: 0 0 2rem 0;
   display: grid;
