@@ -25,6 +25,9 @@ export function Challenges() {
             image={challenge.image}
             title={challenge.title}
             description={challenge.description}
+            liveDemo={challenge.liveDemo}
+            sourceCode={challenge.sourceCode}
+            tech={challenge.tech}
           />
         </li>
       ))}
