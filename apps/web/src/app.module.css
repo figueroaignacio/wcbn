@@ -1,0 +1,5 @@
+@media (width <= 724px) {
+  .app {
+    padding: 1rem;
+  }
+}

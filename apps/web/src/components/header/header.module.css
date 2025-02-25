@@ -19,3 +19,9 @@
     color: var(--accent);
   }
 }
+
+@media (width <= 724px) {
+  .header {
+    padding: 2rem 1rem;
+  }
+}

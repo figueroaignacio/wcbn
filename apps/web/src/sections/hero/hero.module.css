@@ -45,3 +45,11 @@
     transform: translateY(10px);
   }
 }
+
+@media (width <= 724px) {
+  .hero {
+    & h1 {
+      font-size: 2rem;
+    }
+  }
+}
