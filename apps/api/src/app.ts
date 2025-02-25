@@ -5,12 +5,14 @@ import express, { Request, Response } from "express";
 // Routes
 import challengeRouter from "./routes/challenge.route";
 
+const allowedOrigin = process.env.CLIENT_ORIGINS;
+
 const app = express();
 
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: allowedOrigin,
     methods: ["GET", "POST", "DELETE", "UPDATE"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
