@@ -4,10 +4,17 @@ export function Header() {
   return (
     <header className={styles.header}>
       <div>
-        visit my{" "}
-        <a href="https://ignaciofigueroa.vercel.app" target="blank">
-          porfolio ↗
-        </a>
+        <p>
+          visit my{" "}
+          <a href="https://ignaciofigueroa.vercel.app" target="_blank">
+            porfolio ↗
+          </a>
+          {" - "}
+          check the{" "}
+          <a href="https://github.com/figueroaignacio/wcbn" target="_blank">
+            source code ↗
+          </a>
+        </p>
       </div>
     </header>
   );
