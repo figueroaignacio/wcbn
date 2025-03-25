@@ -1,25 +1,9 @@
-import { networkInterfaces } from "os";
-import { app } from "./app";
+import { App } from "./app";
 
 const PORT = process.env.PORT || 3001;
 
-app.listen(PORT, () => {
-  console.log(`
-  🚀 API running at:
+const server = new App();
 
-  ➜  Local:   http://localhost:${PORT}
-  ➜  Network: http://${getLocalIP()}:${PORT}
-
-  🕒 Press CTRL+C to stop
-  `);
+server.listen(PORT, () => {
+  console.log(`🚀 API running at http://localhost:${PORT}`);
 });
-
-function getLocalIP(): string {
-  const nets = networkInterfaces();
-  for (const net of Object.values(nets).flat()) {
-    if (net && net.family === "IPv4" && !net.internal) {
-      return net.address;
-    }
-  }
-  return "localhost";
-}

@@ -1,12 +1,15 @@
 import { Router } from "express";
-import {
-  createNewChallenge,
-  getAllChallenges,
-} from "../controllers/challenge.controller";
+import { ChallengeController } from "../controllers/challenge.controller";
+import { ChallengeService } from "../services/challenge.service";
 
-const challengeRouter = Router();
+const router = Router();
+const challengeService = new ChallengeService();
+const challengeController = new ChallengeController(challengeService);
 
-challengeRouter.get("/", getAllChallenges);
-challengeRouter.put("/", createNewChallenge);
+router.get("/", challengeController.getAllChallenges.bind(challengeController));
+router.post(
+  "/",
+  challengeController.createNewChallenge.bind(challengeController)
+);
 
-export default challengeRouter;
+export default router;

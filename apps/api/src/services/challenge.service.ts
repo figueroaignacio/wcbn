@@ -1,14 +1,14 @@
 import { db } from "../config/db";
-
-// dto's
 import { CreateChallengeDTO } from "../dtos/challenge.dto";
 
-export async function getChallenges() {
-  const challenges = await db.challenge.findMany();
-  return challenges;
-}
+export class ChallengeService {
+  constructor(private readonly database = db) {}
 
-export async function createChallenge(data: CreateChallengeDTO) {
-  const challenge = await db.challenge.create({ data });
-  return challenge;
+  async getChallenges() {
+    return this.database.challenge.findMany();
+  }
+
+  async createChallenge(createChallengeDto: CreateChallengeDTO) {
+    return await this.database.challenge.create({ data: createChallengeDto });
+  }
 }

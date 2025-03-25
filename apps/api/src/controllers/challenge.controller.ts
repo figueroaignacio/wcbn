@@ -1,34 +1,24 @@
 import { NextFunction, Request, Response } from "express";
-
-// dto's
 import { CreateChallengeDTO } from "../dtos/challenge.dto";
+import { ChallengeService } from "../services/challenge.service";
 
-// Services
-import { createChallenge, getChallenges } from "../services/challenge.service";
+export class ChallengeController {
+  constructor(private readonly challengeService: ChallengeService) {}
 
-export async function getAllChallenges(
-  req: Request,
-  res: Response,
-  next: NextFunction
-) {
-  try {
-    const challenges = await getChallenges();
-    res.status(200).json(challenges);
-  } catch (error) {
-    next(error);
+  async getAllChallenges(req: Request, res: Response, next: NextFunction) {
+    try {
+      const challenges = await this.challengeService.getChallenges();
+      res.status(200).json(challenges);
+    } catch (error) {
+      next(error);
+    }
   }
-}
 
-export async function createNewChallenge(
-  req: Request,
-  res: Response,
-  next: NextFunction
-) {
-  try {
-    const data: CreateChallengeDTO = req.body;
-    const challenge = await createChallenge(data);
-    res.status(201).json(challenge);
-  } catch (error) {
-    next(error);
+  async createNewChallenge(req: Request, res: Response, next: NextFunction) {
+    try {
+      const data: CreateChallengeDTO = req.body;
+      const challenge = await this.challengeService.createChallenge(data);
+      res.status(201).json(challenge);
+    } catch (error) {}
   }
 }
