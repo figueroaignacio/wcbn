@@ -19,6 +19,13 @@ export class ChallengeController {
       const data: CreateChallengeDTO = req.body;
       const challenge = await this.challengeService.createChallenge(data);
       res.status(201).json(challenge);
-    } catch (error) {}
+    } catch (error) {
+      res
+        .status(500)
+        .json({
+          message:
+            error instanceof Error ? error.message : "Error creating challenge",
+        });
+    }
   }
 }

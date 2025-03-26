@@ -1,8 +1,6 @@
-import styles from "./app.module.css";
 import { Header } from "./components/header/header";
+import { AppRouter } from "./components/router";
 import { Seo } from "./components/seo";
-import { Challenges } from "./sections/challenges/challenges";
-import { Hero } from "./sections/hero/hero";
 
 export default function App() {
   return (
@@ -12,10 +10,7 @@ export default function App() {
         description="Fullstack site that showcases my completed web challenges"
       />
       <Header />
-      <main className={styles.app}>
-        <Hero />
-        <Challenges />
-      </main>
+      <AppRouter />
     </div>
   );
 }

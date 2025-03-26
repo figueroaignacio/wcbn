@@ -1,0 +1,48 @@
+/* CreateChallenge.module.css */
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.error {
+  color: red;
+}
+
+.formInput {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: var(--input);
+  border-radius: var(--radius);
+  color: var(--foreground);
+}
+
+.formTextarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: var(--input);
+  border-radius: var(--radius);
+  color: var(--foreground);
+  min-height: 100px;
+}
+
+.formButton {
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.formButton:hover {
+  background-color: var(--primary-foreground);
+  color: var(--primary);
+}

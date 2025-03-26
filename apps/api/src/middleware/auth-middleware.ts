@@ -1,6 +1,9 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 import { NextFunction, Request, Response } from "express";
 
-const SECRET_KEY = process.env.API_KEY || "mi-clave-super-secreta";
+const SECRET_KEY = process.env.API_KEY;
 
 export function verifySecretKey(
   req: Request,
